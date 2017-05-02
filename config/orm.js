@@ -5,6 +5,9 @@ var orm = {
   selectAll: function(tableInput, cb) {
     var queryString = "SELECT * FROM ??";
     connection.query(queryString, [tableInput], function(err, result) {
+      if (err) {
+        throw err;
+      }
       cb(result);
     });
   },
@@ -14,6 +17,9 @@ var orm = {
     console.log(valOfCol);
 
     connection.query(queryString, [tableInput, col, valOfCol], function(err, result) {
+      if (err) {
+        throw err;
+      }
       cb(result);
     });
   },
@@ -25,6 +31,9 @@ var orm = {
     console.log(condition);
     
     connection.query(queryString, [tableInput, col, condition], function(err, result) {
+      if (err) {
+        throw err;
+      }
       cb(result);
     });
   }
