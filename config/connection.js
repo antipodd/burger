@@ -12,7 +12,7 @@ if(process.env.JAWSDB_URL) {
         root: 3000,
         host: "localhost",
         user: "root",
-        password: "6s&Mov!Drac3k",
+        password: "",
         database: "burgers_db",
     });
 };
